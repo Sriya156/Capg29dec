@@ -1,0 +1,20 @@
+package com.cg.ovs.exception;
+
+public class PaymentNotFoundExceptionResponse {
+	
+	private String paymentNotFound;
+
+	public PaymentNotFoundExceptionResponse(String paymentNotFound) {
+		super();
+		this.paymentNotFound = paymentNotFound;
+	}
+
+	public String getProjectNotFound() {
+		return paymentNotFound;
+	}
+
+	public void setProjectNotFound(String paymentNotFound) {
+		this.paymentNotFound = paymentNotFound;
+	}
+}
+	

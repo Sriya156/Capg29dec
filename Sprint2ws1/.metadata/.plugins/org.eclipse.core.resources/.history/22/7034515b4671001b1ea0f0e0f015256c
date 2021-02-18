@@ -1,0 +1,32 @@
+package com.cg.ovs.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.ovs.domain.Payment;
+import com.cg.ovs.exception.PaymentIdException;
+import com.cg.ovs.repository.PaymentRepository;
+
+@Service
+public class PaymentService 
+{
+	@Autowired
+	private PaymentRepository paymentRepository;
+	
+	public Payment saveOrUpdate(Payment payment)
+	{
+		try
+		{
+			payment.setPaymentId(payment.getPaymentId());
+			return paymentRepository.save(payment);
+		}
+		catch(Exception e)
+		{
+			throw new PaymentIdException("Order id"+payment.getPaymentId()+"already exists");
+		}
+	}
+	public Iterable<Payment> getAllPayments()
+	{
+		return paymentRepository.findAll();
+	}
+}

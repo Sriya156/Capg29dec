@@ -1,0 +1,24 @@
+package com.cg.ovs.exception;
+
+
+public class PaymentIdExceptionResponse
+{
+	private int paymentId;
+
+	public PaymentIdExceptionResponse(int paymentId) 
+	{
+		super();
+		this.paymentId = paymentId;
+	}
+
+	public int getPaymentIdentity() 
+	{
+		return paymentId;
+	}
+
+	public void setPaymentIdentity(int paymentId)
+	{
+		this.paymentId = paymentId;
+	}
+
+}

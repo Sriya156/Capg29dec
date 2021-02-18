@@ -1,0 +1,13 @@
+package com.cg.ovs.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.cg.ovs.domain.Payment;
+
+
+@Repository
+public interface PaymentRepository extends CrudRepository<Payment,Integer>
+{
+	Payment findByPaymentIdentity(String paymentIdentity);
+}
