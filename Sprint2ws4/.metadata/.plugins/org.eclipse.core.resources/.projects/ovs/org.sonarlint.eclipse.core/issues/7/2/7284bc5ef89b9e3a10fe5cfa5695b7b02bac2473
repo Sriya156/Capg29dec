@@ -1,0 +1,21 @@
+
+‘
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(õÕïùÿÿÿÿ8Úİ­øû.HëRMINORZ
+CODE_SMELL
+a
+java:S14521"&Remove usage of generic wildcard type.(–ÿË¦úÿÿÿÿ8Úİ­øû.HìRCRITICALZ
+CODE_SMELL
+\
+java:S1452)"&Remove usage of generic wildcard type.(®ıÀÙ8Úİ­øû.HíRCRITICALZ
+CODE_SMELL
+Œ
+java:S2293."YReplace the type specification in this constructor call with the diamond operator ("<>").(‡æÿ8Úİ­øû.HîRMINORZ
+CODE_SMELL
+‘
+java:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(£ŞÄşÿÿÿÿ8Úİ­øû.HïRMINORZ
+CODE_SMELL
+y
+java:S4684)"@Replace this persistent entity with a simple POJO or DTO object.(®ıÀÙ8Úİ­øû.HğRCRITICALZVULNERABILITY
+a
+java:S1452#"&Remove usage of generic wildcard type.(ïö…§ûÿÿÿÿ8Úİ­øû.HñRCRITICALZ
+CODE_SMELL

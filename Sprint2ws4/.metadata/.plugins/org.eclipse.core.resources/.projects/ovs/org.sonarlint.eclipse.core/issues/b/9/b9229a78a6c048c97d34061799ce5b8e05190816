@@ -1,0 +1,9 @@
+
+Œ
+java:S5843"TSimplify this regular expression to reduce its complexity from 21 to the 20 allowed.(øÚ‘Äùÿÿÿÿ8Ê¥Ê“ü.HãRMAJORZ
+CODE_SMELL
+}
+java:S5998"LRefactor this repetition that can lead to a stack overflow for large inputs.(øÚ‘Äùÿÿÿÿ8Ê¥Ê“ü.HáRMAJORZBUG
+·
+java:S11861"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü¢Ùá8Ê¥Ê“ü.HàRCRITICALZ
+CODE_SMELL

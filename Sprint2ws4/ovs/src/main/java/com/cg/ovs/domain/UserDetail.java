@@ -1,0 +1,103 @@
+package com.cg.ovs.domain;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
+@Entity
+public class UserDetail {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
+	@NotBlank(message = "Name is Required")
+	@Pattern(regexp = "[a-zA-Z]{5,15}", message = "Name can only have characters with min size of 5 and max of 20")
+	private String name;
+	@NotBlank(message = "Contact is Required")
+	@Pattern(regexp = "(0/91)?[7-9][0-9]{9}", message = "Enter a valid phone number")
+	private String contact;
+	@NotBlank(message = "Email Id is Required")
+    @Column(unique =true,updatable=false)
+	@Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\."
+		        +"[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*"
+		        +"@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
+		             message="Enter a valid email")
+	private String emailId;
+	@Pattern(regexp = "[A-Z]{5,15}", message = "Login Name can only have uppercase characters with min size of 5 and max of 20")
+	@NotBlank(message = "Login Name is Required")
+	private String loginName;
+	@NotBlank(message = "Login Name is Required")
+	@Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",message="Minimum eight characters, at least one letter and one number")
+	private String password;
+	@Min(value=1, message="Role can be 1(Admin) or 2(Customer)")  
+	@Max(value=2, message="Role can be 1(Admin) or 2(Customer)") 
+	@Column(updatable = false)
+	private int role;
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name="address_id")
+    private Address address;
+	public UserDetail()
+	{
+		
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getContact() {
+		return contact;
+	}
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+	public String getEmailId() {
+		return emailId;
+	}
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+	public String getLoginName() {
+		return loginName;
+	}
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public int getRole() {
+		return role;
+	}
+	public void setRole(int role) {
+		this.role = role;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+}
+	

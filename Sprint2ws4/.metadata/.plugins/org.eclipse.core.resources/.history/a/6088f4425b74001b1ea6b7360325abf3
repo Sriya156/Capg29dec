@@ -1,0 +1,81 @@
+package com.cg.ovs.serviceImpl;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.ovs.domain.OrderDetail;
+//import com.cg.ovs.domain.OrderDetail;
+import com.cg.ovs.domain.Payment;
+import com.cg.ovs.exception.OrderNoException;
+import com.cg.ovs.exception.OrderNotFoundException;
+//import com.cg.ovs.exception.OrderNoException;
+import com.cg.ovs.exception.PaymentIdException;
+import com.cg.ovs.exception.PaymentNotFoundException;
+import com.cg.ovs.repository.OrderRepository;
+//import com.cg.ovs.repository.OrderRepository;
+import com.cg.ovs.repository.PaymentRepository;
+import com.cg.ovs.service.OrderService;
+import com.cg.ovs.service.PaymentService;
+
+/**This is an implementation of the service class .*/
+@Service
+public class PaymentServiceImpl implements PaymentService
+{
+	@Autowired
+	private PaymentRepository paymentRepository;
+	
+	@Autowired
+	private OrderService orderService;
+	
+	/**This method will implement the save method and save a payment made by a customer to the database.*/
+	public Payment saveOrUpdate(Payment payment,String orderNo)
+	{
+		try
+		{
+			OrderDetail order=orderService.findOrderByNumber(orderNo);
+			if(order==null)
+			{
+				throw new OrderNotFoundException("Order no"+orderNo+"doesn't exist");
+			}
+			payment.setOrderDetail(order);
+			paymentRepository.save(payment);
+			return payment;
+		}
+		catch(Exception e)
+		{
+			throw new PaymentIdException("Payment id "+payment.getPaymentId()+" already exists");
+		}
+	}
+	
+	/**This method will implement the find payment by id method and find a payment made by a customer in the database with a particular id.*/
+	public Payment findPaymentId(int paymentId)
+	{
+		Payment payment=paymentRepository.findByPaymentId(paymentId);
+		if(payment==null)
+		{
+			throw new PaymentIdException("Payment id "+paymentId+" does not exist");
+		}
+		return payment;
+	}
+	
+	
+	/**This method will implement the get all payments method and get all the payments made by all customers in the database.*/
+	public Iterable<Payment> getAllPayments()
+	{
+		return paymentRepository.findAll();
+	}
+	
+	/**This method will implement the delete method and delete a payment made by a customer in the database.*/
+	public void deletePaymentId(int paymentId)
+	{
+		Payment payment=paymentRepository.findByPaymentId(paymentId);
+		if(payment==null)
+		{
+			throw new PaymentNotFoundException("Payment id "+paymentId+" does not exist");
+		}
+		
+		paymentRepository.delete(payment);
+	}
+
+}

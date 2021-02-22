@@ -1,0 +1,18 @@
+
+y
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(ä•·8­–§”ü.H¸RCRITICALZVULNERABILITY
+Œ
+java:S2293$"YReplace the type specification in this constructor call with the diamond operator ("<>").(©Ğ˜¯8­–§”ü.HºRMINORZ
+CODE_SMELL
+‰
+java:S1128
+"QRemove this unused import 'org.springframework.web.bind.annotation.PathVariable'.(¹ûñÅşÿÿÿÿ8­–§”ü.HµRMINORZ
+CODE_SMELL
+p	java:S106 "9Replace this use of System.out or System.err by a logger.(Ì¶ªßûÿÿÿÿ8­–§”ü.H¹RMAJORZ
+CODE_SMELL
+„
+java:S1128	"QRemove this unused import 'org.springframework.web.bind.annotation.PatchMapping'.(£ø‹º8­–§”ü.H¶RMINORZ
+CODE_SMELL
+\
+java:S1452"&Remove usage of generic wildcard type.(ä•·8­–§”ü.H·RCRITICALZ
+CODE_SMELL

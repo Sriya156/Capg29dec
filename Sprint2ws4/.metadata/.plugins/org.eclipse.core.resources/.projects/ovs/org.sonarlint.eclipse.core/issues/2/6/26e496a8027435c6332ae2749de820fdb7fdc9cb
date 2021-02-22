@@ -1,0 +1,24 @@
+
+k	java:S106"9Replace this use of System.out or System.err by a logger.(ĞİÇ¥8ºëŒ”ü.HŸRMAJORZ
+CODE_SMELL
+Œ
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(³¯Æ¥8ºëŒ”ü.HRMINORZ
+CODE_SMELL
+\
+java:S1452"&Remove usage of generic wildcard type.(ûäó8ºëŒ”ü.HRCRITICALZ
+CODE_SMELL
+\
+java:S1452"&Remove usage of generic wildcard type.(£Æíö8ºëŒ”ü.HœRCRITICALZ
+CODE_SMELL
+Œ
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(³¯Æ¥8ºëŒ”ü.H RMINORZ
+CODE_SMELL
+‘
+java:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸©Šúÿÿÿÿ8ºëŒ”ü.H¡RMINORZ
+CODE_SMELL
+b
+java:S3740"/Provide the parametrized type for this generic.(³¯Æ¥8ºëŒ”ü.H›RMAJORZ
+CODE_SMELL
+b
+java:S3740"/Provide the parametrized type for this generic.(³¯Æ¥8ºëŒ”ü.HšRMAJORZ
+CODE_SMELL

@@ -1,0 +1,9 @@
+
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¯¢ØşÿÿÿÿHˆRMINORZ
+CODE_SMELL
+“
+java:S11920"XDefine a constant instead of duplicating this literal "Email Id doesn't Exists" 3 times.(­˜§ğıÿÿÿÿ8Ú³‡”ü.HRCRITICALZ
+CODE_SMELL
+„
+java:S1871"LThis branch's code block is the same as the block for the branch on line 20.(ÒÌâ–øÿÿÿÿ8Ú³‡”ü.H“RMAJORZ
+CODE_SMELL

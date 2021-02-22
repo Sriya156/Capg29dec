@@ -1,0 +1,17 @@
+package com.cg.ovs.service;
+import org.springframework.stereotype.Service;
+import com.cg.ovs.domain.Payment;
+
+/**This will be handled by service and it performs the operations on database*/
+@Service
+public interface PaymentService 
+{
+	/**This method is for saving a payment made by a customer to the database.*/
+	public Payment saveOrUpdate(Payment payment,String orderNo);
+	/**This method is for finding a payment made by a customer in the database with a particular id.*/
+	public Payment findPaymentId(int paymentId);
+	/**This method is for finding all the payments made by all customers in the database.*/
+	public Iterable<Payment> getAllPayments();
+	/**This method is for deleting a payment made by a customer in the database.*/
+	public void deletePaymentId(int paymentId);
+}
